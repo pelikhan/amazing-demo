@@ -528,7 +528,7 @@ interface WorkspaceFileSystem {
 
     /**
      * Reads the content of a file and parses to JSON, using the JSON5 parser.
-     * @param path 
+     * @param path
      */
     readJSON(path: string | WorkspaceFile): Promise<any>
 
@@ -869,6 +869,8 @@ interface ParseZipOptions {
     glob?: string
 }
 
+type TokenEncoder = (text: string) => number[]
+
 interface Parsers {
     /**
      * Parses text as a JSON5 payload
@@ -1018,7 +1020,7 @@ interface Parsers {
      * Parses and evaluates a math expression
      * @param expression math expression compatible with mathjs
      */
-    math(expression: string): string | number | undefined
+    math(expression: string): Promise<string | number | undefined>
 
     /**
      * Using the JSON schema, validates the content
