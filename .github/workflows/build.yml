@@ -1,6 +1,7 @@
 name: Run GenAI Script
 
 on: 
+  pull_request:
   push:
     branches:
       - main
