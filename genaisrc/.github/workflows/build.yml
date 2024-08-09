@@ -1,0 +1,22 @@
+name: Run GenAI Script
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  run-genai-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Run GenAI Script
+      run: npx --yes genaiscript@^1.48.5 run poem --apply-edits --model github:gpt-4o --pull-request-reviews
