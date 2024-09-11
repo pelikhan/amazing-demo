@@ -31,7 +31,8 @@ do {
 git diff --cached
 \`\`\`
 Please generate a concise, one-line commit message for these changes.
-- do NOT add quotes`
+- do NOT add quotes
+- use emojis`
         },
         { cache: false, temperature: 0.8 }
     )
