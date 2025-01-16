@@ -26,6 +26,8 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   }
 }
 
+
+
 resource webAppPortal 'Microsoft.Web/sites@2022-03-01' = {
   name: webAppPortalName
   location: location
