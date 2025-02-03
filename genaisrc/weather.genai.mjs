@@ -1,31 +1,20 @@
-script({
-    model: "ollama:llama3.2:1b",
-    parameters: {
-        city: {
-            type: "string",
-            default: "seattle"
-        }
-    }
-})
-
 defTool(
     "weather",
-    "gets the live weather information about a city",
+    "gets real time weather information about a city",
     {
         type: "object",
         properties: {
             city: {
                 type: "string",
-                description: "The city name"
-            }
+                description: "The city to get the weather information for",
+            },
         },
-        required: ["city"]
+        required: ["city"],
     },
-    async({city}) => {
-        console.debug(`asking weather for ${city}`)
-        if (/seattle/i.test(city)) return 'rainy'
-        else return 'unknown'
+    async ({ city }) => {
+        if(/seattle/i.test(city)) return "snowy"
+        return "unknown"
     }
 )
 
-$`What is the weather in ${env.vars.city}?`
+$`What is the weather in Paris?`
