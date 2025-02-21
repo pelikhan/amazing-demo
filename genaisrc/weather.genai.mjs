@@ -17,4 +17,4 @@ defTool(
     }
 )
 
-$`What is the weather in Paris?`
+$`What is the weather in Seattle?`
