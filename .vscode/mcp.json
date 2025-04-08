@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "genaiscript": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "genaiscript", "mcp", "--cwd", "${workspaceFolder}"],
+      "envFile": "${workspaceFolder}/.env"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
