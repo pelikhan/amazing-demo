@@ -3,12 +3,8 @@
     "genaiscript": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "genaiscript", "mcp", "--cwd", "${workspaceFolder}"],
+      "args": ["-y", "genaiscript", "mcp", "--cwd", "${workspaceFolder}", "--groups", "mcp"],
       "envFile": "${workspaceFolder}/.env"
-    },
-    "playwright": {
-      "command": "npx",
-      "args": ["@playwright/mcp@latest"]
     }
   }
 }
