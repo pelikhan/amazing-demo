@@ -9,4 +9,19 @@ messages:
 
       body:
       {{body}}
-model: openai/gpt-4o
+model: openai/gpt-4.1-mini
+testData:
+  - title: title
+    body: body
+    expected: expected
+evaluators:
+  - name: Similarity
+    uses: github/similarity
+  - name: Coherence
+    uses: github/coherence
+  - name: Fluency
+    uses: github/fluency
+  - name: Relevance
+    uses: github/relevance
+  - name: Groundedness
+    uses: github/groundedness
