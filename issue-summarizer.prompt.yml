@@ -1,0 +1,12 @@
+messages:
+  - role: system
+    content: You are a helpful assistant that summarizes an issue.
+  - role: user
+    content: |-
+      Here is the issue text 
+      title:
+      {{title}} 
+
+      body:
+      {{body}}
+model: openai/gpt-4o
