@@ -25,3 +25,14 @@ evaluators:
     uses: github/relevance
   - name: Groundedness
     uses: github/groundedness
+  - name: custom
+    llm:
+      model: gpt-4o
+      modelId: 'azureml://registries/azure-openai/models/gpt-4o/versions/2024-11-20'
+      prompt: the prompt
+      choices:
+        - choice: OK
+          score: 1
+        - choice: ERR
+          score: 0
+      systemPrompt: sytem prompt
